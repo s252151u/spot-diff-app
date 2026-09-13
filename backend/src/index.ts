@@ -82,7 +82,7 @@ const todoFieldsSchema = z.object({
 });
 
 const todoInputSchema = todoFieldsSchema.refine(
-  (input) => input.startDate === undefined || input.dueDate <= input.startDate,
+  (input) => input.startDate === undefined || input.dueDate >= input.startDate,
   {
     message: "期限は開始日以降の日付を指定してください",
     path: ["dueDate"],
