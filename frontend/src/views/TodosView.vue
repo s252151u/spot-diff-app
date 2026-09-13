@@ -371,7 +371,7 @@ async function removeTodo(todo: Todo) {
 
   try {
     await deleteTodo(todo.id);
-    todos.value = todos.value.filter((item) => item.id !== todo.title);
+    todos.value = todos.value.filter((item) => item.id !== todo.id);
   } catch (error) {
     errorMessage.value = error instanceof Error ? error.message : "TODOの削除に失敗しました。";
   }
