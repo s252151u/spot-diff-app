@@ -233,6 +233,8 @@ app.delete("/api/todos/:id", (c) => {
   }
 
   todos = todos.filter((todo) => todo.id !== id);
+  console.log(todos);
+
   return c.json({ data: { deletedId: id } });
 });
 
