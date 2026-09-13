@@ -234,6 +234,7 @@ app.delete("/api/todos/:id", (c) => {
 
   todos = todos.filter((todo) => todo.id !== id);
   return c.json({ data: { deletedId: id } });
+  console.log(id, exists);
 });
 
 app.notFound((c) =>
