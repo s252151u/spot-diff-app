@@ -24,6 +24,7 @@ async function loadTodo() {
 
   try {
     todo.value = await getTodo(String(route.params.id));
+    console.log(todo.value);
   } catch (error) {
     errorMessage.value = error instanceof Error ? error.message : "タスクを取得できませんでした。";
   } finally {
