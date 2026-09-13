@@ -57,7 +57,6 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:8787
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const headers = new Headers(init?.headers);
   headers.set("Content-Type", "application/json");
-
   const response = await fetch(`${API_BASE_URL}${path}`, {
     ...init,
     headers,
@@ -92,7 +91,7 @@ export async function createTodo(input: CreateTodoInput): Promise<Todo> {
 
 export async function updateTodo(id: string, input: UpdateTodoInput): Promise<Todo> {
   const response = await request<TodoResponse>(`/todos/${id}`, {
-    method: "PUT",
+    method: "PATCH",
     body: JSON.stringify(input),
   });
 
