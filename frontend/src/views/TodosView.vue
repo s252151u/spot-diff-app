@@ -509,8 +509,8 @@ onMounted(loadTodos);
             <span>表示</span>
             <select v-model="statusFilter" aria-label="状態で絞り込み">
               <option value="all">すべて</option>
-              <option value="open">未完了</option>
-              <option value="done">完了</option>
+              <option value="open">完了</option>
+              <option value="done">未完了</option>
             </select>
           </label>
         </div>
