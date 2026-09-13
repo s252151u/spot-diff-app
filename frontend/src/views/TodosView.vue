@@ -549,7 +549,7 @@ onMounted(loadTodos);
               </form>
               <template v-else>
                 <div class="todo-title-row">
-                  <RouterLink :to="`/task/${todo.id}`" class="todo-title-link">
+                  <RouterLink :to="`/tasks/${todo.id}`" class="todo-title-link">
                     <h3>{{ todo.title }}</h3>
                     <ChevronRight :size="16" />
                   </RouterLink>
