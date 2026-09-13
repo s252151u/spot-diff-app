@@ -109,7 +109,7 @@ function sampledDateRange(start: string, end: string, maxPoints: number) {
 }
 
 const completedCount = computed(
-  () => todos.value.filter((todo) => Reflect.get(todo, "completed") === true).length,
+  () => todos.value.filter((todo) => Reflect.get(todo, "isCompleted") === true).length,
 );
 const openCount = computed(() => todos.value.length - completedCount.value);
 const overdueCount = computed(
