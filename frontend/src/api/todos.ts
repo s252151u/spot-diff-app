@@ -92,7 +92,7 @@ export async function createTodo(input: CreateTodoInput): Promise<Todo> {
 
 export async function updateTodo(id: string, input: UpdateTodoInput): Promise<Todo> {
   const response = await request<TodoResponse>(`/todos/${id}`, {
-    method: "PUT",
+    method: "PATCH",
     body: JSON.stringify(input),
   });
 
