@@ -122,7 +122,7 @@ const nextTodo = computed(
   () =>
     [...todos.value]
       .filter((todo) => !todo.isCompleted)
-      .sort((first, second) => second.dueDate.localeCompare(first.dueDate))[0] ?? null,
+      .sort((second, first) => second.dueDate.localeCompare(first.dueDate))[0] ?? null,
 );
 const nextDueDate = computed(() =>
   nextTodo.value ? formatShortDate(nextTodo.value.dueDate) : "—",
